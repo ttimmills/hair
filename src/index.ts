@@ -36,10 +36,10 @@ export type IconsPluginOptions = {
 } & GenerateOptions
 
 type PluginFn = Parameters<typeof plugin>[0]
-let getPluginFunction = (
+const getPluginFunction = (
   iconsPluginOptions?: IconsPluginOptions,
 ): PluginFn => {
-  let {
+  const {
     collections: propsCollections,
     scale = 1,
     prefix = "i",
@@ -48,23 +48,23 @@ let getPluginFunction = (
     collectionNamesAlias = {},
   } = iconsPluginOptions ?? {}
 
-  let collections =
+  const collections =
     propsCollections ??
     getIconCollections(
       collectionNames.filter((name) =>
         isPackageExists(`@iconify-json/${name}`),
       ),
     )
-  let components: Record<string, Record<string, string>> = {}
+  const components: Record<string, Record<string, string>> = {}
 
-  for (let prefix of Object.keys(collections) as CollectionNames[]) {
-    let collection: IconifyJSONIconsData = {
+  for (const prefix of Object.keys(collections) as CollectionNames[]) {
+    const collection: IconifyJSONIconsData = {
       ...collections[prefix],
       prefix,
     }
     parseIconSet(collection, (name, data) => {
       if (!data) return
-      let collectionName =
+      const collectionName =
         collectionNamesAlias[prefix as CollectionNames] ?? prefix
       components[`${collectionName}-${name}`] = generateIconComponent(data, {
         scale,
@@ -88,17 +88,17 @@ let getPluginFunction = (
   }
 }
 
-export let iconsPlugin = (iconsPluginOptions?: IconsPluginOptions) => {
+export const iconsPlugin = (iconsPluginOptions?: IconsPluginOptions) => {
   return plugin(getPluginFunction(iconsPluginOptions))
 }
 
-export let dynamicIconsPlugin = (
+export const dynamicIconsPlugin = (
   iconsPluginOptions?: Omit<
     IconsPluginOptions,
     "collections" | "collectionNamesAlias"
   >,
 ) => {
-  let {
+  const {
     prefix = "i",
     scale = 1,
     strokeWidth,
