@@ -1,11 +1,11 @@
 export type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>
 
 function callsites() {
-  var _prepareStackTrace = Error.prepareStackTrace
+  const _prepareStackTrace = Error.prepareStackTrace
   try {
     let result: NodeJS.CallSite[] = []
     Error.prepareStackTrace = (_, callSites) => {
-      var callSitesWithoutCurrent = callSites.slice(1)
+      const callSitesWithoutCurrent = callSites.slice(1)
       result = callSitesWithoutCurrent
       return callSitesWithoutCurrent
     }
@@ -19,16 +19,16 @@ function callsites() {
 }
 
 function callerPath1() {
-  var callSites = callsites()
+  const callSites = callsites()
   if (!callSites[0]) return
   return callSites[0].getFileName()
 }
 
 function callerPath2() {
-  var error = new Error()
-  var stack = error.stack?.split("\n") as string[]
+  const error = new Error()
+  const stack = error.stack?.split("\n") as string[]
 
-  var data = stack.find(
+  const data = stack.find(
     (line) =>
       !line.trim().startsWith("Error") &&
       !line.includes("(") &&
@@ -38,10 +38,10 @@ function callerPath2() {
     return
   }
 
-  var filePathPattern = new RegExp(
+  const filePathPattern = new RegExp(
     /\s*at (\/.*|[a-zA-Z]:\\(?:([^<>:"\/\\|?*]*[^<>:"\/\\|?*.]\\|..\\)*([^<>:"\/\\|?*]*[^<>:"\/\\|?*.]\\?|..\\))?):\d+:\d+/i,
   )
-  var result = filePathPattern.exec(data)
+  const result = filePathPattern.exec(data)
   if (!result) {
     return
   }
