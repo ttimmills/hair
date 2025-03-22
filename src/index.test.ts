@@ -44,9 +44,9 @@ test("main", async () => {
 
         background-color: currentColor;
 
-        -webkit-mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
 
-        mask-image: var(--svg);
+        mask-image: let(--svg);
 
         -webkit-mask-repeat: no-repeat;
 
@@ -69,9 +69,9 @@ test("main", async () => {
 
         background-color: currentColor;
 
-        -webkit-mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
 
-        mask-image: var(--svg);
+        mask-image: let(--svg);
 
         -webkit-mask-repeat: no-repeat;
 
@@ -94,9 +94,9 @@ test("main", async () => {
 
         background-color: currentColor;
 
-        -webkit-mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
 
-        mask-image: var(--svg);
+        mask-image: let(--svg);
 
         -webkit-mask-repeat: no-repeat;
 
@@ -119,9 +119,9 @@ test("main", async () => {
 
         background-color: currentColor;
 
-        -webkit-mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
 
-        mask-image: var(--svg);
+        mask-image: let(--svg);
 
         -webkit-mask-repeat: no-repeat;
 
@@ -189,9 +189,9 @@ test("custom icon", async () => {
 
         background-color: currentColor;
 
-        -webkit-mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
 
-        mask-image: var(--svg);
+        mask-image: let(--svg);
 
         -webkit-mask-repeat: no-repeat;
 
@@ -214,9 +214,9 @@ test("custom icon", async () => {
 
         background-color: currentColor;
 
-        -webkit-mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
 
-        mask-image: var(--svg);
+        mask-image: let(--svg);
 
         -webkit-mask-repeat: no-repeat;
 
@@ -260,8 +260,8 @@ test("set collection automatically", async () => {
         width: 1em;
         height: 1em;
         background-color: currentColor;
-        -webkit-mask-image: var(--svg);
-        mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
+        mask-image: let(--svg);
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-size: 100% 100%;
@@ -313,8 +313,8 @@ test("custom icon collection name", async () => {
         width: 1em;
         height: 1em;
         background-color: currentColor;
-        -webkit-mask-image: var(--svg);
-        mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
+        mask-image: let(--svg);
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-size: 100% 100%;
@@ -326,8 +326,8 @@ test("custom icon collection name", async () => {
         width: 1em;
         height: 1em;
         background-color: currentColor;
-        -webkit-mask-image: var(--svg);
-        mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
+        mask-image: let(--svg);
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-size: 100% 100%;
@@ -361,8 +361,8 @@ test("generate icon dynamically", async () => {
         width: 1em;
         height: 1em;
         background-color: currentColor;
-        -webkit-mask-image: var(--svg);
-        mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
+        mask-image: let(--svg);
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-size: 100% 100%;
@@ -374,8 +374,8 @@ test("generate icon dynamically", async () => {
         width: 1em;
         height: 1em;
         background-color: currentColor;
-        -webkit-mask-image: var(--svg);
-        mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
+        mask-image: let(--svg);
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-size: 100% 100%;
@@ -409,8 +409,8 @@ test("get all icon explicitly", { timeout: 20000 }, async () => {
         width: 1em;
         height: 1em;
         background-color: currentColor;
-        -webkit-mask-image: var(--svg);
-        mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
+        mask-image: let(--svg);
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-size: 100% 100%;
@@ -422,8 +422,8 @@ test("get all icon explicitly", { timeout: 20000 }, async () => {
         width: 1em;
         height: 1em;
         background-color: currentColor;
-        -webkit-mask-image: var(--svg);
-        mask-image: var(--svg);
+        -webkit-mask-image: let(--svg);
+        mask-image: let(--svg);
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-size: 100% 100%;
