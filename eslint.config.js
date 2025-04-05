@@ -2,18 +2,18 @@ import process from "node:process"
 import ts from "@typescript-eslint/eslint-plugin"
 import tsParser from "@typescript-eslint/parser"
 
-const files = ["src/**/*.ts"]
-const languageOptions = {
+let files = ["src/**/*.ts"]
+let languageOptions = {
   parser: tsParser,
   parserOptions: {
     project: true,
     tsconfigRootDir: process.cwd(),
   },
 }
-const linterOptions = {
+let linterOptions = {
   reportUnusedDisableDirectives: true,
 }
-const plugins = {
+let plugins = {
   "@typescript-eslint": ts,
 }
 
